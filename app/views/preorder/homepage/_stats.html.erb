@@ -42,7 +42,7 @@
     
     <div id="reserve_container">
       <p id="ship_date"><%= Settings.ships %></p>
-      <a href="/preorder/checkout" class="blue_button reserve"><%= Settings.call_to_action %></a>
+      <a style="margin:10px 0;width:250px;height:75px;padding-top:20px;font-size:30px;" class="wepay-widget-button wepay-blue reserve" id="wepay_widget_anchor_5096da823279b" href="https://www.wepay.com/donations/285592146"><%= Settings.call_to_action %></a><script type="text/javascript">var WePay = WePay || {};WePay.load_widgets = WePay.load_widgets || function() { };WePay.widgets = WePay.widgets || [];WePay.widgets.push( {object_id: 285592146,widget_type: "donation_campaign",anchor_id: "wepay_widget_anchor_5096da823279b",widget_options: {list_suggested_donations: true,allow_cover_fee: true,enable_recurring: true,allow_anonymous: true,button_text: "Donate"}});if (!WePay.script) {WePay.script = document.createElement('script');WePay.script.type = 'text/javascript';WePay.script.async = true;WePay.script.src = 'https://static.wepay.com/min/js/widgets.v2.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(WePay.script, s);} else if (WePay.load_widgets) {WePay.load_widgets();}</script>
       <p id="price"><%= Settings.price_human %></p>
       <p><%= Settings.dont_give_them_a_reason_to_say_no %></p>
       <%= like_button %>
