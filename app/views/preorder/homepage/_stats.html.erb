@@ -4,45 +4,13 @@
   </div>
 
   <div id="backing">
-    <ul>
-      <li class="stats" id="backers">
-        <%= number_with_delimiter Order.current, :delimiter => "," %>
-        <span><%= Settings.primary_stat %></span>
-      </li>
-      <li class="stats">
-        <%= number_to_currency Order.revenue, :precision => 0 %>
-        <span>of <%= number_to_currency Settings.project_goal.to_f * Settings.price.to_f, :precision => 0 %></span>
-      </li>
-
-      <% if Settings.expiration_date.present? %>
-        <li class="stats" id="days">
-          <%= distance_of_time_in_words_to_now(Settings.expiration_date).gsub(/\D/, "") %>
-          <span><%= distance_of_time_in_words_to_now(Settings.expiration_date).gsub(/\d/, "").gsub("about", "") %> left</span>
-        </li>
-      <% else %>
-        <li class="stats" id="days">
-            &infin;
-            <span>days left</span>
-          </li>
-      <% end %>
-    </ul>
-    
-    <% if Order.current < Order.goal %>
-      <div id='progress_bg' class='small'>
-        <div id='progress' class='' style='width: <%= Order.percent %>%;'>
-        </div>
-      </div>
-    <% else %>
-      <div id="progress_bg">
-        <div id="progress">
-        </div>
-        <div id='progress_text'><%= Order.percent %>% <%= Settings.progress_text %></div>
-      </div>
-    <% end %>
+    <a class="wepay-widget-button wepay-green" id="wepay_widget_anchor_5096e4e6401e2" href="https://www.wepay.com/donations/1513052137">View Progress</a><script type="text/javascript">var WePay = WePay || {};WePay.load_widgets = WePay.load_widgets || function() { };WePay.widgets = WePay.widgets || [];WePay.widgets.push( {object_id: 1513052137,widget_type: "donation_campaign_progress",anchor_id: "wepay_widget_anchor_5096e4e6401e2",widget_options: {no_dialog: "true",button_text: "View Progress"}});if (!WePay.script) {WePay.script = document.createElement('script');WePay.script.type = 'text/javascript';WePay.script.async = true;WePay.script.src = 'https://static.wepay.com/min/js/widgets.v2.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(WePay.script, s);} else if (WePay.load_widgets) {WePay.load_widgets();}</script>
     
     <div id="reserve_container">
       <p id="ship_date"><%= Settings.ships %></p>
-      <a style="margin:10px 0;width:250px;height:75px;padding-top:20px;font-size:30px;" class="wepay-widget-button wepay-blue reserve" id="wepay_widget_anchor_5096da823279b" href="https://www.wepay.com/donations/285592146"><%= Settings.call_to_action %></a><script type="text/javascript">var WePay = WePay || {};WePay.load_widgets = WePay.load_widgets || function() { };WePay.widgets = WePay.widgets || [];WePay.widgets.push( {object_id: 285592146,widget_type: "donation_campaign",anchor_id: "wepay_widget_anchor_5096da823279b",widget_options: {list_suggested_donations: true,allow_cover_fee: true,enable_recurring: true,allow_anonymous: true,button_text: "Donate"}});if (!WePay.script) {WePay.script = document.createElement('script');WePay.script.type = 'text/javascript';WePay.script.async = true;WePay.script.src = 'https://static.wepay.com/min/js/widgets.v2.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(WePay.script, s);} else if (WePay.load_widgets) {WePay.load_widgets();}</script>
+
+      <a style="margin:10px 0;width:250px;height:75px;padding-top:20px;font-size:30px;" class="wepay-widget-button wepay-blue" id="wepay_widget_anchor_5096e515d595b" href="https://www.wepay.com/donations/1513052137">Heal Now!</a><script type="text/javascript">var WePay = WePay || {};WePay.load_widgets = WePay.load_widgets || function() { };WePay.widgets = WePay.widgets || [];WePay.widgets.push( {object_id: 1513052137,widget_type: "donation_campaign",anchor_id: "wepay_widget_anchor_5096e515d595b",widget_options: {list_suggested_donations: true,allow_cover_fee: true,allow_anonymous: true,button_text: "Heal Now!"}});if (!WePay.script) {WePay.script = document.createElement('script');WePay.script.type = 'text/javascript';WePay.script.async = true;WePay.script.src = 'https://static.wepay.com/min/js/widgets.v2.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(WePay.script, s);} else if (WePay.load_widgets) {WePay.load_widgets();}</script>
+
       <p id="price"><%= Settings.price_human %></p>
       <p><%= Settings.dont_give_them_a_reason_to_say_no %></p>
       <%= like_button %>
