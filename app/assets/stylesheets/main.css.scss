@@ -6,3 +6,43 @@
 @import "homepage";
 @import "share";
 @import "checkout";
+
+/* ----------------------------------------------------
+            Global
+----------------------------------------------------- */
+* { font-family:'Droid Sans', serif !important; }
+body  { text-shadow:none; color:#333333; background:#F2EEE2; }
+a { color:#2DA4E9; }
+h1, h2, h3 { font-family: 'Droid Sans', serif; color:#333333; }
+
+/* ----------------------------------------------------
+            Classes
+----------------------------------------------------- */
+.gray_background { background:none; }
+.big_wrapper { background:#F2EEE2; border-bottom-color:rgba(0,0,0,.2); }
+.big_wrapper .wrapper { padding:80px 0; background:none !important; }
+.big_wrapper:nth-child(2n+2) { background:white; }
+
+/* ----------------------------------------------------
+            Specific
+----------------------------------------------------- */
+#header { background:none; box-shadow:none; }
+#header h1 { float:none; margin:0 auto; width:196px; height:78px; text-indent:-1000px; }
+#header h1 a { display:block; width:196px; height:78px; background:url('assets/images/global_logo.png'); }
+#homepage_banner { margin-top:-130px; padding-top:170px; padding-bottom:100px; background:url('assets/images/global_bg_hoboken.jpg') center top repeat-x; }
+#reserve_container { border-top-color:rgba(0,0,0,.2); box-shadow:none; }
+#reserve_container #ship_date { display:none; }
+#reserve_container #price { color:#333333; }
+#reserve_container p { color:#333333; }
+#reserve_container .reserve { margin-top:10px; }
+#backing .stats { border-right-color:rgba(0,0,0,.2); }
+#backing .stats span { color:#333333; }
+#backing #progress_bg { background:#F2EEE2; }
+#logos { display:none; }
+
+
+
+
+
+
+
