@@ -37,7 +37,9 @@ body p.large { font-size:24px; line-height:150%; font-weight:300; }
 .app-subhead { margin:0 0 60px; padding:0 30px; font-size:58px; text-align:center; }
 .app-slideshow-container { padding:10px; background:@app_color_e; }
 .app-slideshow-container .orbit { margin:0; }
-.app-supporting { margin-top:10px; text-align:center; font-size:11px; line-height:1; }
+.app-slideshow-mobile img { display:block; margin-bottom:20px; padding:10px; background:@app_color_e; width:100%; }
+.app-supporting { margin-top:20px; text-align:center; font-size:14px; line-height:1; font-weight:700; -moz-text-shadow:1px 1px 0px rgba(255, 255, 255, .5); -webkit-text-shadow:1px 1px 0px rgba(255, 255, 255, .5); text-shadow:1px 1px 0px rgba(255, 255, 255, .5); }
+.app-supporting a { color:@app_color_d; }
 .app-socials { margin-top:30px; }
 .app-social { margin-top:10px; }
 .app-social:first-child { margin-top:0; }
@@ -66,9 +68,13 @@ body p.large { font-size:24px; line-height:150%; font-weight:300; }
    Responsive
 ----------------------------------------- */
 @media only screen and (min-width:768px) {
-	
+	.app-twitter { display:block; }
+	.app-slideshow-mobile { display:none; }
+	.app-slideshow-container { display:block; }
 }
 
 @media only screen and (max-width:767px) {	
-
+	.app-twitter { display:none; }
+	.app-slideshow-mobile { display:block; }
+	.app-slideshow-container { display:none; }
 }
