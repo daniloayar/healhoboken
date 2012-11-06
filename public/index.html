@@ -21,6 +21,17 @@
   <![endif]-->
 </head>
 <body>
+    <!-- facebook javascript sdk - include once -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=244031445722905";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- -->
+
     <div class="app-top row">
         <h1 class="app-logo">
             <span></span>
@@ -61,14 +72,6 @@
                 <div class="app-socials">
                     <div class="app-social">
                         <div class="fb-like" data-href="http://healhoboken.org" data-send="false" data-width="450" data-show-faces="false" data-action="recommend" data-font="arial"></div>
-                        <div id="fb-root"></div>
-                        <script>(function(d, s, id) {
-                          var js, fjs = d.getElementsByTagName(s)[0];
-                          if (d.getElementById(id)) return;
-                          js = d.createElement(s); js.id = id;
-                          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=244031445722905";
-                          fjs.parentNode.insertBefore(js, fjs);
-                        }(document, 'script', 'facebook-jssdk'));</script>
                     </div>
                     <div class="app-social">
                         <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
@@ -101,7 +104,7 @@
             <div class="twelve columns"><p class="large">FAQ</p></div>
         </div>
         <div class="row">
-            <div class="twelve columns">
+            <div class="eight columns">
                 <strong>Where does the money go?</strong><br />
                 We’re planning on giving all of the proceeds to the Hoboken Relief Fund.  We will verify that it is legitimate before making any donations. If there is any concern (which there currently isn’t), we’ll donate the money to the American Red Cross.
                 <br /><br />
@@ -126,6 +129,9 @@
                 <strong>How else can we help?</strong><br />
                 Spread the word on Twitter, Facebook, or just email your friends. Please share our campaign whether you buy stuff here or not!
                 <br /><br />
+            </div>
+            <div class="app-twitter four columns">
+                <div class="fb-comments" data-href="http://www.healhoboken.org" data-num-posts="8" data-width="350"></div>
             </div>
             <!-- <div class="app-twitter four columns">
                 <a class="twitter-timeline" href="https://twitter.com/search?q=http%3A%2F%2Fwww.healhoboken.org%2F" data-widget-id="265502346153435137">Tweets about "http://www.healhoboken.org/"</a>
