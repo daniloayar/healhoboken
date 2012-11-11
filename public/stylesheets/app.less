@@ -46,7 +46,7 @@ body p.large { font-size:24px; line-height:150%; font-weight:300; }
 .app-letter { padding-bottom:150px; }
 .app-footer { text-align:center; }
 .app-sig-shirt { position:absolute; right:0; bottom:0; width:500px; }
-.app-twitter iframe { width:100% !important; }
+.app-facebook iframe { width:100% !important; }
 
 /* -----------------------------------------
    Wepay
@@ -67,13 +67,20 @@ body p.large { font-size:24px; line-height:150%; font-weight:300; }
    Responsive
 ----------------------------------------- */
 @media only screen and (min-width:768px) {
-	.app-twitter { display:block; }
+	.app-facebook { display:block; }
 	.app-slideshow-mobile { display:none; }
 	.app-slideshow-container { display:block; }
 }
 
 @media only screen and (max-width:767px) {	
-	.app-twitter { display:none; }
+	.app-facebook { display:none; }
 	.app-slideshow-mobile { display:block; }
 	.app-slideshow-container { display:none; }
 }
+
+/* -----------------------------------------
+   IE
+----------------------------------------- */
+.lt-ie9 .app-facebook { display:none; }
+.lt-ie9 .app-slideshow-mobile { display:block; }
+.lt-ie9 .app-slideshow-container { display:none; }
